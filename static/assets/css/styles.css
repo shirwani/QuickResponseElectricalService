@@ -1,0 +1,193 @@
+:root{
+  --qres-navy:#0b1f3a;
+  --qres-blue:#114b8a;
+  --qres-yellow:#ffc107;
+  --qres-light:#f7f9fc;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,"Apple Color Emoji","Segoe UI Emoji";
+}
+
+/* Match the original quickresponseelectricalservice.com (Divi) navbar typography */
+.navbar,
+.navbar .navbar-brand,
+.navbar .nav-link,
+.navbar .dropdown-item,
+.navbar .btn{
+  font-family: "Open Sans", Arial, sans-serif;
+}
+.navbar .nav-link,
+.navbar .dropdown-item{
+  font-weight: 500;
+}
+
+/* Navbar font sizing: 25% smaller */
+.navbar{
+  font-size: 0.8rem;
+}
+.navbar .nav-link,
+.navbar .dropdown-item,
+.navbar .btn{
+  font-size: inherit;
+}
+
+/* Navbar dropdown items: 30% smaller than navbar */
+.navbar .dropdown-menu .dropdown-item{
+  font-size: 0.75em;
+}
+
+/* Global image shadows (all content images site-wide) */
+.section img:not([class*="shadow"]){
+  box-shadow: 0 10px 24px rgba(16,24,40,.12);
+}
+
+.topbar{
+  background: var(--qres-navy);
+  color:#fff;
+  font-size:.9rem;
+}
+.topbar a{ color:#fff; text-decoration:none; }
+.topbar a:hover{ text-decoration:underline; }
+
+.navbar-brand img{
+  height:58px;
+  width:auto;
+}
+
+@media (max-width: 575.98px){
+  .navbar-brand img{
+    height:45px;
+  }
+}
+
+.footer-logo{
+  height:52px;
+  width:auto;
+  border-radius:12px;
+}
+
+.btn-call{
+  background: var(--qres-yellow);
+  border-color: var(--qres-yellow);
+  color:#111;
+  font-weight:700;
+}
+.btn-call:hover{
+  background:#ffcd39;
+  border-color:#ffcd39;
+  color:#111;
+}
+
+.hero{
+  background:
+    linear-gradient(90deg, rgba(11,31,58,.92), rgba(11,31,58,.72)),
+    url("../img/electrician_24.jpg");
+  background-size: cover;
+  background-position: center;
+  color:#fff;
+}
+
+.hero .badge{
+  background: rgba(255,255,255,.14);
+  border:1px solid rgba(255,255,255,.18);
+  color:#fff;
+}
+
+.section{
+  padding: 4.5rem 0;
+}
+.section.bg-light{
+  background: var(--qres-light) !important;
+}
+
+.icon-circle{
+  width:44px;
+  height:44px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:999px;
+  background: rgba(255,193,7,.18);
+  border: 1px solid rgba(255,193,7,.35);
+}
+.icon-circle img{
+  width:22px;
+  height:22px;
+}
+
+.card-service{
+  border:0;
+  background:#fff;
+  box-shadow:
+    0 2px 6px rgba(16,24,40,.08),
+    0 16px 30px rgba(16,24,40,.12);
+  transition: box-shadow .18s ease, transform .18s ease;
+}
+
+.card-service:hover{
+  box-shadow:
+    0 4px 10px rgba(16,24,40,.10),
+    0 22px 44px rgba(16,24,40,.16);
+  transform: translateY(-2px);
+}
+
+.list-compact{
+  columns: 2;
+  column-gap: 2rem;
+}
+@media (min-width: 992px){
+  .list-compact{ columns: 3; }
+}
+@media (max-width: 575.98px){
+  .list-compact{ columns: 1; }
+}
+
+footer{
+  background: var(--qres-navy);
+  color: rgba(255,255,255,.9);
+}
+footer a{ color: rgba(255,255,255,.95); }
+footer a:hover{ color:#fff; }
+
+/* About page */
+.about-hero-image{
+  width: 60%;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (max-width: 991.98px){
+  .about-hero-image{
+    width: 100%;
+  }
+}
+
+/* FAQ */
+.qres-accordion .accordion-item{
+  border: 1px solid rgba(16,24,40,.12);
+  border-radius: 1rem;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 10px 24px rgba(16,24,40,.06);
+  margin-bottom: .75rem;
+}
+.qres-accordion .accordion-item:last-child{
+  margin-bottom: 0;
+}
+.qres-accordion .accordion-button{
+  font-weight: 700;
+}
+.qres-accordion .accordion-button:not(.collapsed){
+  background: rgba(255,193,7,.18);
+  color: var(--qres-navy);
+}
+.qres-accordion .accordion-button:focus{
+  box-shadow: 0 0 0 .25rem rgba(255,193,7,.25);
+}
+

@@ -1,0 +1,39 @@
+/* Photo turnstile (carousel) styling for Recent Work */
+#recentWorkCarousel{
+  background: #e9ecef; /* light grey for arrow contrast */
+  border-radius: 18px;
+  padding: 1rem;
+}
+
+#recentWorkCarousel .carousel-control-prev,
+#recentWorkCarousel .carousel-control-next{
+  /* Helps the arrows pop on light/varied photos */
+  filter: drop-shadow(0 6px 14px rgba(0,0,0,.35));
+}
+
+.qres-turnstile-btn{
+  border: 0;
+  padding: 0;
+  background: transparent;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.qres-turnstile-img{
+  /* Scale down to fit, but never upscale beyond the original pixel width (set via JS). */
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  max-height: 70vh;
+  border-radius: 18px;
+  display: block;
+  box-shadow: 0 10px 24px rgba(16,24,40,.08);
+}
+
+.qres-turnstile-caption{
+  margin-top: .6rem;
+  text-align: center;
+}
+

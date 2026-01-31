@@ -1,0 +1,251 @@
+{% extends "_base.html" %}
+
+{% block title %}Quick Response Electrical Service{% endblock %}
+
+{% block meta %}
+  <meta name="description" content="We provide a range of Industrial, Residential, & Commercial Electrical Services in Boston for All Needs." />
+  <link rel="canonical" href="http://quickresponseelectricalservice.com/recent-work/" />
+{% endblock %}
+
+{% block extra_css %}
+  <link href="{{ url_for('static', filename='assets/css/turnstile.css') }}" rel="stylesheet" />
+{% endblock %}
+
+{% block content %}
+  <header class="section hero">
+    <div class="container">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-8">
+          <h1 class="display-6 fw-bold mb-3">
+            We Provide a Range of<br />
+            <strong>Industrial, Residential, &amp; Commercial Electrical Services in Boston for All Needs</strong>
+          </h1>
+          <p class="lead mb-4">
+            We provide you with a full consultation to explain your available options so that you can choose the scope of work that’s right for your home or business contingent upon your budget and time constraints.
+            We strive to save you both time and money by combining our deep experience, the highest quality parts and equipment, and our dedication to delivering exceptional electrical service at all times.
+          </p>
+          <div class="d-flex flex-wrap gap-2">
+            <a class="btn btn-call btn-lg" href="tel:5089222646">Book An Appointment</a>
+            <a class="btn btn-outline-light btn-lg" href="#footer-contact">Get a Quote</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="section bg-light">
+    <div class="container">
+      <div class="row g-3">
+        <div class="col-md-6 col-lg-3">
+          <div class="card card-service h-100">
+            <div class="card-body">
+              <h2 class="h5">Residential Electrical Services</h2>
+              <p class="mb-0">
+                From wiring upgrades to lighting installations, our residential electrical services are designed to enhance your home’s safety and efficiency.
+                We troubleshoot and repair electrical problems to keep your home secure day and night.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="card card-service h-100">
+            <div class="card-body">
+              <h2 class="h5">Commercial Electrical Services</h2>
+              <p class="mb-0">
+                For commercial electrical services, local businesses can trust us to deliver. We understand the unique demands of commercial properties, and our team is equipped with the knowledge and skills to handle everything from electrical system setups to routine maintenance. Our goal is to ensure your business runs seamlessly and without interruption.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="card card-service h-100">
+            <div class="card-body">
+              <h2 class="h5">Emergency Electrical Repair Services</h2>
+              <p class="mb-0">
+                When electrical issues strike, you need a reliable partner to restore safety and functionality to your home or business. Our skilled electricians are available 24/7, ready to tackle any electrical emergency with precision and care.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="card card-service h-100">
+            <div class="card-body">
+              <h2 class="h5">Electrical Wiring Installation</h2>
+              <p class="mb-0">
+                At Quick Response Electrical Service, we pride ourselves on delivering top-notch electrical wiring installation in Boston. Understanding the critical nature of precise and safe wiring, our certified electricians are committed to providing the best solutions tailored to both residential and commercial needs.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="project-photos" class="section">
+    <div class="container">
+      <div class="d-flex flex-wrap justify-content-between align-items-end gap-3 mb-3">
+        <div>
+          <div class="text-uppercase small text-muted">Recent Work</div>
+          <h2 class="h3 mb-0">Project Photos</h2>
+        </div>
+        <div id="recentWorkCarouselCounter" class="small text-muted"></div>
+      </div>
+
+      <div id="recentWorkCarousel" class="carousel slide" data-bs-ride="false" data-bs-interval="false" aria-label="Project photo turnstile"
+           data-gallery-base-url="{{ url_for('static', filename='assets/img/gallery/') }}">
+        <div id="recentWorkCarouselInner" class="carousel-inner"></div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#recentWorkCarousel" data-bs-slide="prev" aria-label="Previous photo">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#recentWorkCarousel" data-bs-slide="next" aria-label="Next photo">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        </button>
+      </div>
+
+      <div class="small text-muted mt-2">Tap a photo to enlarge.</div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-6">
+          <h2 id="building-automation" class="h3">Building Automation</h2>
+          <p>
+            Quick Response Electrical Service employ a team of highly knowledgeable and specialized "Licensed" electricians that deliver top quality installations for a number of the largest Building Automation System Providers in the Electrical Industry.
+            As a subcontractor working aside our Building Automation contractors, we understand that the quality and precision of our installation are a direct representation of our clients.
+            We spend a good deal of time to in understanding the uniqueness of a said project and establish a plan of execution with our clients that ultimately delivers a superior installation, second to none.
+          </p>
+          <p>
+            From start-up. We provide detailed drawings to our clients' technicians and work directly with them to make sure the system comes "Satisfactory" on arrival.
+            If you are in need of a contractor to provide professional electrical work for the installation of your Building Automation System Solution, you have come to the right place.
+            You can trust Quick Response Electrical Service to provide all you need effectively, efficiently, and on-time.
+          </p>
+        </div>
+        <div class="col-lg-6">
+          <div class="row g-3">
+            <div class="col-12">
+              <div class="p-4 rounded-4 border bg-light">
+                <h3 class="h5 mb-2">Complete Renovations</h3>
+                <p class="mb-0">Restoration or replacement of electrical panels along with meters. Professional upgrades of existing electrical components bringing to local codes.</p>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="p-4 rounded-4 border bg-light">
+                <h3 class="h5 mb-2">Electrical Testing</h3>
+                <p class="mb-0">Testing of all electrical circuits and equipment to verify all is working correct.</p>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="p-4 rounded-4 border bg-light">
+                <h3 class="h5 mb-2">Security Alert</h3>
+                <p class="mb-0">Safety first is our motto, assuring that health and safety are top priority. Meeting codes of all fire hazards.</p>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="p-4 rounded-4 border bg-light">
+                <h3 class="h5 mb-2">Energy Survey</h3>
+                <p class="mb-0">Paying close attention to details regarding efficiency and saving you money in the long run on your monthly payments.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section bg-light">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-7">
+          <h2 id="electrical-retrofitting" class="h3">Electrical Retrofitting</h2>
+          <p>
+            Quick Response Electrical Service provides everything you may possibly require for retrofitting <strong>HVAC Mechanical</strong> <strong>Equipment</strong> or <strong>Upgrading</strong> your <strong>Electrical</strong> <strong>Systems</strong>, you can count on Quick Response.
+            We provide Disconnect/Reconnect, New Feeder and Controls Electrical Services for Mechanical HVAC Retrofits.
+            We can install VFD's on Mechanical Motors or retrofit your lighting to reduce Energy Consumption.
+          </p>
+          <p>
+            Our team works to provide each and every customer we serve with top of the line retrofitting services and unsurpassed customer service.
+            Our Quick Response attention to detail and focus on continuing education while expanding in technology has made us a leader in Retrofitting.
+          </p>
+          <p class="mb-0">
+            As one of the most reliable options for retrofitting electrical services in all of Boston and Metro-West, many of our clients come to us due to our long-standing experience, our commitment to intense training, and project cost-effectiveness.
+            We can provide a wide range of Professional services that are essential to any retrofit proiect that has crossed the Quick Response path. - Claudio Oliviera
+          </p>
+        </div>
+        <div class="col-lg-5">
+          <img class="img-fluid w-75 rounded-4 shadow-sm" src="{{ url_for('static', filename='assets/img/electrician_2.png') }}" alt="Electrician" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="modal fade" id="galleryModal" tabindex="-1" aria-labelledby="galleryModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title h5" id="galleryModalLabel">Project photo</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-0">
+          <img id="galleryModalImg" class="img-fluid d-block mx-auto" alt="" />
+        </div>
+        <div class="modal-footer justify-content-between">
+          <a id="galleryModalOpen" class="btn btn-outline-primary" href="#" target="_blank" rel="noreferrer">Open image</a>
+          <button type="button" class="btn btn-call" data-bs-dismiss="modal">Done</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="application/json" id="galleryImages">
+    [
+      "2025-10-05.webp",
+      "2025-09-16.webp",
+      "2025-08-13.webp",
+      "2025-08-13 (1).webp",
+      "2025-08-07.webp",
+      "2025-08-07 (2).webp",
+      "2025-08-07 (1).webp",
+      "2025-05-28.webp",
+      "2025-04-19.webp",
+      "2025-04-01.webp",
+      "2025-02-01.webp",
+      "2024-11-15.webp",
+      "2024-11-15 (1).webp",
+      "2024-08-13.webp",
+      "2023-12-10.webp",
+      "2023-12-10 (1).webp",
+      "2023-11-11.webp",
+      "2023-11-04.webp",
+      "2023-11-04 (9).webp",
+      "2023-11-04 (8).webp",
+      "2023-11-04 (7).webp",
+      "2023-11-04 (6).webp",
+      "2023-11-04 (5).webp",
+      "2023-11-04 (4).webp",
+      "2023-11-04 (3).webp",
+      "2023-11-04 (2).webp",
+      "2023-11-04 (11).webp",
+      "2023-11-04 (10).webp",
+      "2023-11-04 (1).webp",
+      "2023-10-30.webp",
+      "2023-10-30 (1).webp",
+      "2023-06-06.webp",
+      "2023-06-06 (1).webp",
+      "2023-02-08.webp",
+      "2023-02-08 (1).webp",
+      "2023-01-30.webp",
+      "2023-01-30 (1).webp",
+      "2022-09-22.webp",
+      "2022-09-22 (8).webp",
+      "2022-09-22 (7).webp",
+      "2022-09-22 (6).webp",
+      "2022-09-22 (5).webp",
+      "2022-09-22 (4).webp",
+      "2022-09-22 (3).webp",
+      "2022-09-22 (2).webp",
+      "2022-09-22 (1).webp"
+    ]
+  </script>
+{% endblock %}

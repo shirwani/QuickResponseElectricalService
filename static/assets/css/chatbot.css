@@ -1,0 +1,233 @@
+/* Chat widget (embeddable)
+   NOTE: This stylesheet intentionally contains ONLY .va-* scoped styles
+   to avoid conflicting with host site styles. */
+
+/* --- Chat widget (embeddable) --- */
+.va-launcher {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 9999;
+
+  width: 56px;
+  height: 56px;
+  border-radius: 999px;
+  border: 0;
+
+  /* Remove dark background so the image itself shows cleanly */
+  background: transparent;
+
+  /* Ensure the image stays centered and doesn't overflow */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px; /* gives contain-fit images room so they aren't cropped by the circle */
+  overflow: hidden;
+
+  cursor: pointer;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.22);
+
+  /* Some images may have transparency; prevent inherited text color from affecting it */
+  color: transparent;
+}
+
+.va-launcher-img {
+  /* Make sure the whole image is visible inside the padded circle */
+  width: calc(100% - 12px);
+  height: calc(100% - 12px);
+  max-width: calc(100% - 12px);
+  max-height: calc(100% - 12px);
+
+  object-fit: contain;
+  object-position: center;
+  background: transparent;
+  display: block;
+}
+
+/* Visually hide text, but keep it available if image fails and for accessibility */
+.va-launcher-text {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.va-widget {
+  position: fixed;
+  right: 18px;
+  bottom: 86px;
+  z-index: 9999;
+
+  width: min(420px, calc(100vw - 36px));
+  height: min(640px, calc(100vh - 120px));
+
+  display: none;
+  overflow: hidden;
+
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  box-shadow: 0 18px 50px rgba(0,0,0,0.25);
+
+  /* Smaller typography inside the widget */
+  font-size: 13px;
+}
+
+.va-widget .va-title { font-size: 13px; }
+.va-widget .va-subtitle { font-size: 11px; }
+.va-widget .va-controls label { font-size: 11px; }
+.va-widget .msg { font-size: 13px; }
+.va-widget textarea { font-size: 13px; }
+.va-widget button { font-size: 13px; }
+.va-widget .hint { font-size: 11px; }
+
+.va-widget.is-open {
+  display: flex;
+  flex-direction: column;
+}
+
+.va-header {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 12px 14px;
+  border-bottom: 1px solid #e5e7eb;
+  background: #111827;
+  color: #fff;
+}
+
+.va-title { font-size: 14px; font-weight: 800; line-height: 1.1; }
+.va-subtitle { font-size: 12px; opacity: 0.85; margin-top: 2px; }
+
+.va-close {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  border: 0;
+  background: rgba(255,255,255,0.12);
+  color: #fff;
+  cursor: pointer;
+}
+
+.va-controls {
+  flex: 0 0 auto;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 10px 12px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.va-controls label {
+  font-size: 12px;
+  color: #374151;
+}
+
+.va-controls select {
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  padding: 8px 10px;
+  background: #fff;
+  font-size: 14px;
+}
+
+.va-widget button {
+  border: 0;
+  border-radius: 12px;
+  padding: 10px 14px;
+  font-size: 14px;
+  cursor: pointer;
+  background: #111827;
+  color: #fff;
+}
+
+.va-widget button:disabled { opacity: 0.6; cursor: not-allowed; }
+
+/* Main chat area should scroll, not the whole widget */
+.va-widget .va-body {
+  flex: 1 1 auto;
+  min-height: 0; /* critical for nested scrolling */
+  display: flex;
+  flex-direction: column;
+}
+
+.va-widget .card {
+  flex: 1 1 auto;
+  min-height: 0; /* critical for nested scrolling */
+
+  display: flex;
+  flex-direction: column;
+
+  background: #fff;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.va-widget #chat {
+  flex: 1 1 auto;
+  min-height: 0;
+
+  overflow-y: auto;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.va-widget form {
+  flex: 0 0 auto;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 10px;
+  padding: 12px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.va-widget textarea {
+  width: 100%;
+  resize: none;
+  height: 44px;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  padding: 10px 12px;
+  background: #fff;
+  font-size: 14px;
+}
+
+.va-widget .msg {
+  max-width: 80%;
+  padding: 10px 12px;
+  border-radius: 12px;
+  line-height: 1.35;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.va-widget .user { align-self: flex-end; background: #2563eb; color: white; }
+.va-widget .assistant { align-self: flex-start; background: #f3f4f6; color: #111827; }
+
+.va-widget .hint {
+  flex: 0 0 auto;
+  font-size: 12px;
+  color: #6b7280;
+  padding: 8px 12px 12px;
+  margin: 0;
+}
+
+.va-widget .va-site {
+  font-size: 11px;
+  color: #6b7280;
+  padding: 2px 6px;
+  border: 1px solid #e5e7eb;
+  border-radius: 999px;
+  background: #f9fafb;
+}

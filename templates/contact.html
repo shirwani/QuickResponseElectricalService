@@ -1,0 +1,49 @@
+{% extends "_base.html" %}
+
+{% block title %}Contact Us | Boston - Quick Response Electrical Service{% endblock %}
+
+{% block meta %}
+  <meta name="description" content="Enjoy a top-notch electrical system installation in Boston that only Quick Response Electrical Service can deliver. Call (508)-922-2646." />
+  <link rel="canonical" href="http://quickresponseelectricalservice.com/24-7-electrical-service/" />
+{% endblock %}
+
+{% block content %}
+  <header class="section hero">
+    <div class="container">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-8">
+          <h1 class="display-6 fw-bold mb-3">Contact Us</h1>
+          <p class="lead mb-4">
+            Enjoy a top-notch electrical system installation in Boston that only Quick Response Electrical Service can deliver. Our team of skilled electricians is dedicated to providing reliable service to ensure your electrical supply system operates at peak performance.
+          </p>
+          <div class="d-flex flex-wrap gap-2">
+            <a class="btn btn-outline-light btn-lg" href="{{ url_for('recent_work') }}">View Recent Work</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="h3">Comprehensive Commercial Electrical Services</h2>
+      <p class="mb-0">
+        No matter the scale of your electrical requirements, we provide top-notch commercial electrical services to ensure your business operates smoothly. Our experienced electricians are trained in the latest technologies and safety standards, ensuring a seamless installation process that enhances your property’s functionality.
+      </p>
+    </div>
+  </section>
+
+  <section class="section bg-light">
+    <div class="container">
+      <div class="row g-4 align-items-center">
+        <div class="col-lg-5">
+          <div class="p-4 rounded-4 border bg-white">
+            <h3 class="h5 mb-2">Book An Appointment</h3>
+            <p class="mb-3">Call us to schedule your service.</p>
+            <a class="btn btn-call w-100" href="tel:5089222646">Call Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}

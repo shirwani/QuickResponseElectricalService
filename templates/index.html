@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Commercial Electrical Services | Boston</title>
+    <meta name="description" content="Since 2003, Quick Response Electrical Service has been providing quality electrical services to residential and commercial customers in the Greater Boston Area. We provide emergency electrical service which is available 24/7. Speak with our courteous staff today at 508-922-2646 to learn more." />
+    <link rel="canonical" href="http://quickresponseelectricalservice.com/" />
+
+    <link rel="icon" href="assets/favicon/favicon-32.png" sizes="32x32" />
+    <link rel="icon" href="assets/favicon/favicon-192.png" sizes="192x192" />
+
+    <meta property="og:title" content="Quick Response Electrical Service" />
+    <meta property="og:description" content="Quality electrical services in the Greater Boston Area. Emergency electrical service available 24/7. Call 508-922-2646." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://quickresponseelectricalservice.com/" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link href="assets/css/styles.css" rel="stylesheet" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Quick Response Electrical Service LLC.",
+        "url": "http://quickresponseelectricalservice.com/",
+        "telephone": "+15089222646",
+        "email": "quickresponseelectricalservice@yahoo.com",
+        "areaServed": ["Greater Boston Area", "New England"]
+      }
+    </script>
+  </head>
+  <body>
+    {% extends "_base.html" %}
+
+    {% block title %}Commercial Electrical Services | Boston{% endblock %}
+
+    {% block meta %}
+      <meta name="description" content="Since 2003, Quick Response Electrical Service has been providing quality electrical services to residential and commercial customers in the Greater Boston Area. We provide emergency electrical service which is available 24/7. Speak with our courteous staff today at 508-922-2646 to learn more." />
+      <link rel="canonical" href="http://quickresponseelectricalservice.com/" />
+
+      <meta property="og:title" content="Quick Response Electrical Service" />
+      <meta property="og:description" content="Quality electrical services in the Greater Boston Area. Emergency electrical service available 24/7. Call 508-922-2646." />
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content="http://quickresponseelectricalservice.com/" />
+
+    {% endblock %}
+
+    {% block extra_css %}
+      {# chatbot.css is now included globally in _base.html #}
+    {% endblock %}
+
+    {% block content %}
+      <header class="hero">
+        <div class="container section">
+          <div class="row align-items-center g-4">
+            <div class="col-lg-7">
+              <span class="badge rounded-pill mb-3">Emergency electrical service available 24/7</span>
+              <h1 class="display-5 fw-bold">Quick Response Electrical Service</h1>
+              <p class="lead mb-4">
+                Since 2003, Quick Response Electrical Service has been providing quality electrical services to residential and commercial customers in the Greater Boston Area.
+                Our experienced electricians offer quality workmanship and on-time responses. Customer satisfaction is our top priority.
+              </p>
+              <div class="d-flex flex-wrap gap-2">
+                <a class="btn btn-call btn-lg" href="tel:5089222646">Call (508)-922-2646</a>
+                <a class="btn btn-outline-light btn-lg" href="{{ url_for('recent_work') }}">View Recent Work</a>
+              </div>
+            </div>
+            <div class="col-lg-5">
+              <div class="p-4 rounded-4 bg-dark bg-opacity-25 border border-light border-opacity-10">
+                <h2 class="h5 fw-semibold mb-3">We provide emergency electrical service which is available 24/7.</h2>
+                <p class="mb-0">
+                  Let Quick Response Electrical Service be your first choice for all of your electrical needs.
+                  Speak with our courteous staff today at <a class="link-light" href="tel:5089222646">508-922-2646</a> to learn more.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <section class="section bg-light">
+        <div class="container">
+          <div class="row g-4">
+            <div class="col-lg-5">
+              <div class="d-flex align-items-center gap-3 mb-2">
+                <div>
+                  <div class="text-uppercase small text-muted">About Us</div>
+                  <h2 class="h3 m-0">About Us &amp; Why We are <strong>The Best For the Job</strong></h2>
+                </div>
+              </div>
+              <p class="mb-3"><strong>Quick Response Electrical Service LLC.</strong></p>
+              <p class="mb-4">
+                Since 2003, Quick Response Electrical Service has been providing quality electrical services to residential and commercial customers in the Greater Boston Area.
+                Our experienced electricians offer quality workmanship and on-time responses. Customer satisfaction is our top priority.
+              </p>
+              <a class="btn btn-outline-primary" href="{{ url_for('about') }}">More About Us</a>
+            </div>
+            <div class="col-lg-7">
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <div class="card card-service h-100">
+                    <div class="card-body">
+                      <h3 class="h5">Electrical Wiring Installation</h3>
+                      <p class="mb-3">At Quick Response Electrical Service, we pride ourselves on delivering top-notch electrical wiring installation in Boston.</p>
+                      <a class="stretched-link" href="{{ url_for('electrical_wiring_installation') }}" aria-label="Electrical Wiring Installation"></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="card card-service h-100">
+                    <div class="card-body">
+                      <h3 class="h5">Emergency Electrical Repair Services</h3>
+                      <p class="mb-3">When electrical issues strike, you need a reliable partner to restore safety and functionality to your home or business.</p>
+                      <a class="stretched-link" href="{{ url_for('emergency_electrical_repair') }}" aria-label="Emergency Electrical Repair Services"></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="card card-service h-100">
+                    <div class="card-body">
+                      <h3 class="h5">Electrical Maintenance Services</h3>
+                      <p class="mb-3">We specialize in providing top-notch electrical maintenance services in Boston to ensure your home and business remain safe, efficient, and fully operational.</p>
+                      <a class="stretched-link" href="{{ url_for('electrical_maintenance') }}" aria-label="Electrical Maintenance Services"></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="card card-service h-100">
+                    <div class="card-body">
+                      <h3 class="h5">Electrical System Installation</h3>
+                      <p class="mb-3">Enjoy a top-notch electrical system installation in Boston that only Quick Response Electrical Service can deliver.</p>
+                      <a class="stretched-link" href="{{ url_for('contact') }}" aria-label="Electrical System Installation"></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="p-4 rounded-4 bg-white border">
+                    <h3 class="h5">Consultation &amp; quality</h3>
+                    <p class="mb-0">
+                      We provide you with a full consultation to explain your available options so that you can choose the scope of work that’s right for your home or business contingent upon your budget and time constraints.
+                      We strive to save you both time and money by combining our deep experience, the highest quality parts and equipment, and our dedication to delivering exceptional electrical service at all times.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="row align-items-center g-4">
+            <div class="col-lg-6">
+              <img class="img-fluid rounded-4 shadow-sm" src="{{ url_for('static', filename='assets/img/boston.jpg') }}" alt="Boston" />
+            </div>
+            <div class="col-lg-6">
+              <h2 class="h3">Service Areas <strong>Boston-Metro</strong></h2>
+              <p class="mb-3">We provide services to residential and commercial customers in the Greater Boston Area.</p>
+              <div class="d-flex flex-wrap gap-2">
+                <a class="btn btn-outline-primary" href="{{ url_for('about') }}#service-areas">View Service Areas</a>
+                <a class="btn btn-call" href="tel:5089222646">Call Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    {% endblock %}
+
+    {% block extra_js %}{% endblock %}
+  </body>
+</html>
+

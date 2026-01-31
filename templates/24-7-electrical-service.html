@@ -1,0 +1,43 @@
+{% extends "_base.html" %}
+
+{% block title %}24/7 Electrical Service | Boston - Quick Response Electrical Service{% endblock %}
+
+{% block meta %}
+  <meta name="description" content="24/7 emergency electrical service in Boston and MetroWest. Call (508)-922-2646." />
+  <link rel="canonical" href="http://quickresponseelectricalservice.com/24-7-electrical-service/" />
+{% endblock %}
+
+{% block content %}
+  <header class="section hero">
+    <div class="container">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-8">
+          <h1 class="display-6 fw-bold mb-3">24/7 Electrical Service</h1>
+          <p class="lead mb-4">
+            Electrical emergencies can happen at any time. Quick Response Electrical Service provides 24/7 emergency electrical service for homeowners and businesses in the Greater Boston Area.
+          </p>
+          <div class="d-flex flex-wrap gap-2">
+            <a class="btn btn-call btn-lg" href="tel:5089222646">Call (508)-922-2646</a>
+            <a class="btn btn-outline-light btn-lg" href="{{ url_for('recent_work') }}">View Recent Work</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="h3">Fast response when it matters</h2>
+      <p class="mb-0">
+        If you have flickering lights, burning smells, tripped breakers, or a full power outage, call us immediately. Our licensed electricians will diagnose the issue and get you back up safely.
+      </p>
+    </div>
+  </section>
+
+  <section class="section bg-light">
+    <div class="container">
+      <h2 class="h3">Need help right now?</h2>
+      <p class="mb-0">Call us 24/7 at <a href="tel:5089222646">(508)-922-2646</a>.</p>
+    </div>
+  </section>
+{% endblock %}
