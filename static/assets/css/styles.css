@@ -191,3 +191,31 @@ footer a:hover{ color:#fff; }
   box-shadow: 0 0 0 .25rem rgba(255,193,7,.25);
 }
 
+/* Buttons (site-wide): sharp corners + smaller typography
+   NOTE: Intentionally scoped to site/Bootstrap buttons to avoid altering the chat widget (.va-*) */
+:root{
+  --qres-btn-radius: 0px;
+  --qres-btn-font-size: 0.9rem;
+  --qres-btn-font-size-sm: 0.8rem;
+  --qres-btn-font-size-lg: 1rem;
+}
+
+.btn,
+.navbar-toggler,
+.accordion-button,
+.carousel-control-prev,
+.carousel-control-next,
+.btn-close,
+.gallery-btn,
+.qres-turnstile-btn{
+  border-radius: var(--qres-btn-radius) !important;
+  font-size: var(--qres-btn-font-size);
+}
+
+.btn.btn-sm{
+  font-size: var(--qres-btn-font-size-sm);
+}
+
+.btn.btn-lg{
+  font-size: var(--qres-btn-font-size-lg);
+}
