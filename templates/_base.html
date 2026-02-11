@@ -84,7 +84,7 @@
         if (!window.VirtualAssistantWidget || typeof window.VirtualAssistantWidget.init !== 'function') return;
 
         // Prefer a per-request config if provided by the backend; otherwise fall back to local dev.
-        var ragServerUrl = {{ rag_server_url | default('"http://127.0.0.1:8001/"') | safe }};
+        var ragServerUrl = {{ rag_server_url | default('"https://www.chatbot.zakishirwani.com"') | safe }};
 
         window.VirtualAssistantWidget.init({
           ragServerUrl: ragServerUrl,
