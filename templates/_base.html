@@ -77,24 +77,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="{{ url_for('static', filename='assets/js/main.js') }}"></script>
 
-    {# Virtual assistant (site-wide) #}
-    <script src="{{ url_for('static', filename='assets/js/chatbot.js') }}"></script>
-    <script>
-      (function () {
-        if (!window.VirtualAssistantWidget || typeof window.VirtualAssistantWidget.init !== 'function') return;
-
-        // Prefer a per-request config if provided by the backend; otherwise fall back to local dev.
-        var ragServerUrl = {{ rag_server_url | default('"https://www.chatbot.zakishirwani.com"') | safe }};
-
-        window.VirtualAssistantWidget.init({
-          ragServerUrl: ragServerUrl,
-          launcherText: 'Chat',
-          launcherImageUrl: '{{ url_for('static', filename='assets/img/chatbot.jpeg') }}',
-          clientSite: 'quickresponseelectricalservice.com'
-        });
-      })();
-    </script>
-
     {% block extra_js %}{% endblock %}
 
 
